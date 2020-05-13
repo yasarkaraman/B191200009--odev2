@@ -1,0 +1,22 @@
+C:\Users\HP\source\repos\otobüs rezerve\otobüs rezerve\bin\Debug\otobüs rezerve.exe.config
+C:\Users\HP\source\repos\otobüs rezerve\otobüs rezerve\bin\Debug\otobüs rezerve.exe
+C:\Users\HP\source\repos\otobüs rezerve\otobüs rezerve\bin\Debug\otobüs rezerve.pdb
+C:\Users\HP\source\repos\otobüs rezerve\otobüs rezerve\obj\Debug\otobüs_rezerve.Form1.resources
+C:\Users\HP\source\repos\otobüs rezerve\otobüs rezerve\obj\Debug\otobüs_rezerve.Properties.Resources.resources
+C:\Users\HP\source\repos\otobüs rezerve\otobüs rezerve\obj\Debug\otobüs rezerve.csproj.GenerateResource.cache
+C:\Users\HP\source\repos\otobüs rezerve\otobüs rezerve\obj\Debug\otobüs rezerve.exe
+C:\Users\HP\source\repos\otobüs rezerve\otobüs rezerve\obj\Debug\otobüs rezerve.pdb
+C:\Users\HP\source\repos\otobüs rezerve\otobüs rezerve\obj\Debug\otobüs_rezerve.Form2.resources
+C:\Users\HP\source\repos\otobüs rezerve\otobüs rezerve\obj\Debug\otobüs rezerve.csprojAssemblyReference.cache
+C:\Users\HP\source\repos\B1912000009--odev1\otobüs rezerve\bin\Debug\otobüs rezerve.exe.config
+C:\Users\HP\source\repos\B1912000009--odev1\otobüs rezerve\bin\Debug\otobüs rezerve.exe
+C:\Users\HP\source\repos\B1912000009--odev1\otobüs rezerve\bin\Debug\otobüs rezerve.pdb
+C:\Users\HP\source\repos\B1912000009--odev1\otobüs rezerve\obj\Debug\otobüs rezerve.csprojAssemblyReference.cache
+C:\Users\HP\source\repos\B1912000009--odev1\otobüs rezerve\obj\Debug\otobüs_rezerve.Form1.resources
+C:\Users\HP\source\repos\B1912000009--odev1\otobüs rezerve\obj\Debug\otobüs_rezerve.Form2.resources
+C:\Users\HP\source\repos\B1912000009--odev1\otobüs rezerve\obj\Debug\otobüs_rezerve.Properties.Resources.resources
+C:\Users\HP\source\repos\B1912000009--odev1\otobüs rezerve\obj\Debug\otobüs rezerve.csproj.GenerateResource.cache
+C:\Users\HP\source\repos\B1912000009--odev1\otobüs rezerve\obj\Debug\otobüs rezerve.csproj.CoreCompileInputs.cache
+C:\Users\HP\source\repos\B1912000009--odev1\otobüs rezerve\obj\Debug\otobüs rezerve.exe
+C:\Users\HP\source\repos\B1912000009--odev1\otobüs rezerve\obj\Debug\otobüs rezerve.pdb
+C:\Users\HP\source\repos\B1912000009--odev1\otobüs rezerve\obj\Debug\otobüs_rezerve.Form3.resources

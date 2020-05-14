@@ -5,7 +5,7 @@
 **                             NESNEYE DAYALI PROGRAMLAMA DERSİ
 **                                   2019-2020 BAHAR DÖNEMİ
 **
-**                               ÖDEV NUMARASI..........:1
+**                               ÖDEV NUMARASI..........:2
 **                               ÖĞRENCİ ADI............:Yaşar ozan KARAMAN
 **                               ÖĞRENCİ NUMARASI.......:B191200009   
 **                               DERSİN ALINDIĞI GRUP...:A

@@ -5,7 +5,7 @@
 **                             NESNEYE DAYALI PROGRAMLAMA DERSİ
 **                                   2019-2020 BAHAR DÖNEMİ
 **
-**                               ÖDEV NUMARASI..........:1
+**                               ÖDEV NUMARASI..........:2
 **                               ÖĞRENCİ ADI............:Yaşar ozan KARAMAN
 **                               ÖĞRENCİ NUMARASI.......:B191200009   
 **                               DERSİN ALINDIĞI GRUP...:A
@@ -23,7 +23,7 @@ namespace otobüs_rezerve
         SqlConnection baglanti;
         SqlCommand komut;
         SqlDataAdapter da;
-        DataSet ds;
+
         public Form2()
         {
             InitializeComponent();
@@ -31,15 +31,12 @@ namespace otobüs_rezerve
         void kayityap()
         {
             baglanti = new SqlConnection("Data Source=LAPTOP-VMNDQLS3;Initial Catalog=yolcu;Integrated Security=True");
-            da = new SqlDataAdapter("Select *From kayit",baglanti);
-            ds = new DataSet();
             baglanti.Open();
-            da.Fill(ds,"kayit");
-            dataGridView1.DataSource = ds.Tables["kayit"];
+            da = new SqlDataAdapter("Select *From kayit", baglanti);
+            DataTable tablo = new DataTable();
+            da.Fill(tablo);
+            dataGridView1.DataSource = tablo;
             baglanti.Close();
-
-
-
         }
         private void Form2_Load(object sender, EventArgs e)
         {
@@ -48,11 +45,13 @@ namespace otobüs_rezerve
         //Yolcu eklemek için aşağıdaki kod kullanılır
         private void button1_Click_2(object sender, EventArgs e)
         {  //Aşağıdaki kodda ad,soyad ve telefon bilgileri tabloda yer alır.
-
-            komut = new SqlCommand();
+            string sorgu = "insert into kayit(koltukno,ad,soyad,telefon) values (@koltukno,@ad,@soyad,@telefon)";
+            komut = new SqlCommand(sorgu, baglanti);
+            komut.Parameters.AddWithValue("@koltukno", Convert.ToInt32(textBox4.Text));
+            komut.Parameters.AddWithValue("@ad", textBox1.Text);
+            komut.Parameters.AddWithValue("@soyad", textBox2.Text);
+            komut.Parameters.AddWithValue("@telefon", Convert.ToInt32(textBox3.Text));
             baglanti.Open();
-            komut.Connection = baglanti;
-            komut.CommandText="insert into kayit(koltukno,ad,soyad,telefon) values (" + textBox4.Text + ",'" + textBox1.Text + "','" + textBox2.Text + "','" + textBox3.Text + "')";
             komut.ExecuteNonQuery();
             baglanti.Close();
             kayityap();
@@ -61,28 +60,31 @@ namespace otobüs_rezerve
         //Yolcu silmek için aşağıdaki kod kullanılır
         private void button30_Click(object sender, EventArgs e)
         {
-            komut = new SqlCommand();
+
+            string sorgu = "Delete From kayit Where koltukno=@koltukno";
+            komut = new SqlCommand(sorgu, baglanti);
+            komut.Parameters.AddWithValue("@koltukno", Convert.ToInt32(textBox4.Text));
             baglanti.Open();
-            komut.Connection = baglanti;
-            komut.CommandText = "delete from kayit where koltukno=" + textBox4.Text + "";
             komut.ExecuteNonQuery();
             baglanti.Close();
             kayityap();
-
         }
-            //Yolcu güncellemek için aşağıdaki kod kullanılır
+        //Yolcu güncellemek için aşağıdaki kod kullanılır
 
         private void button29_Click(object sender, EventArgs e)
         {
-            komut = new SqlCommand();
+            string sorgu = "update kayit set ad=@ad,soyad=@soyad,telefon=@telefon Where koltukno=@koltukno";
+            komut = new SqlCommand(sorgu, baglanti);
+            komut.Parameters.AddWithValue("@koltukno", Convert.ToInt32(textBox4.Text));
+            komut.Parameters.AddWithValue("@ad", textBox1.Text);
+            komut.Parameters.AddWithValue("@soyad", textBox2.Text);
+            komut.Parameters.AddWithValue("@telefon", Convert.ToInt32(textBox3.Text));
             baglanti.Open();
-            komut.Connection = baglanti;
-            komut.CommandText = "update kayit set ad='" + textBox1.Text + "',soyad='" + textBox2.Text + "',telefon='" + textBox3.Text + "' where koltukno=" + textBox4.Text + "";
             komut.ExecuteNonQuery();
             baglanti.Close();
             kayityap();
-
         }
+       
         private void label2_Click(object sender, EventArgs e)
         {
 
@@ -111,7 +113,7 @@ namespace otobüs_rezerve
                
         }
 
-
+        
         private void radioButton1_CheckedChanged(object sender, EventArgs e)
         {
             

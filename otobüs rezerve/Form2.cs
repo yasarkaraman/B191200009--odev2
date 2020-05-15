@@ -42,12 +42,16 @@ namespace otobüs_rezerve
         {
             kayityap();
         }
+          private void dataGridView1_CellEnter(object sender, DataGridViewCellEventArgs e)
+          {
+            
+        }
         //Yolcu eklemek için aşağıdaki kod kullanılır
         private void button1_Click_2(object sender, EventArgs e)
         {  //Aşağıdaki kodda ad,soyad ve telefon bilgileri tabloda yer alır.
             string sorgu = "insert into kayit(koltukno,ad,soyad,telefon) values (@koltukno,@ad,@soyad,@telefon)";
             komut = new SqlCommand(sorgu, baglanti);
-            komut.Parameters.AddWithValue("@koltukno", Convert.ToInt32(textBox4.Text));
+            komut.Parameters.AddWithValue("@koltukno", Convert.ToInt32(label2.Text));
             komut.Parameters.AddWithValue("@ad", textBox1.Text);
             komut.Parameters.AddWithValue("@soyad", textBox2.Text);
             komut.Parameters.AddWithValue("@telefon", Convert.ToInt32(textBox3.Text));
@@ -61,9 +65,9 @@ namespace otobüs_rezerve
         private void button30_Click(object sender, EventArgs e)
         {
 
-            string sorgu = "Delete From kayit Where koltukno=@koltukno";
+            string sorgu = "Delete From kayit Where ad=@ad";
             komut = new SqlCommand(sorgu, baglanti);
-            komut.Parameters.AddWithValue("@koltukno", Convert.ToInt32(textBox4.Text));
+            komut.Parameters.AddWithValue("@ad",textBox1.Text);
             baglanti.Open();
             komut.ExecuteNonQuery();
             baglanti.Close();
@@ -75,7 +79,7 @@ namespace otobüs_rezerve
         {
             string sorgu = "update kayit set ad=@ad,soyad=@soyad,telefon=@telefon Where koltukno=@koltukno";
             komut = new SqlCommand(sorgu, baglanti);
-            komut.Parameters.AddWithValue("@koltukno", Convert.ToInt32(textBox4.Text));
+            komut.Parameters.AddWithValue("@koltukno", Convert.ToInt32(label2.Text));
             komut.Parameters.AddWithValue("@ad", textBox1.Text);
             komut.Parameters.AddWithValue("@soyad", textBox2.Text);
             komut.Parameters.AddWithValue("@telefon", Convert.ToInt32(textBox3.Text));
@@ -129,12 +133,6 @@ namespace otobüs_rezerve
             
 
         }
-
-        
-
-        
-
-      
         private void groupBox2_Enter(object sender, EventArgs e)
         {
 
@@ -150,7 +148,7 @@ namespace otobüs_rezerve
             {
                 button6.BackColor = Color.Red;
             }
-
+            label2.Text = "5";
         }
 
         private void button10_Click(object sender, EventArgs e)
@@ -163,6 +161,7 @@ namespace otobüs_rezerve
             {
                 button10.BackColor = Color.Red;
             }
+            label2.Text = "13";
         }
 
         private void button14_Click(object sender, EventArgs e)
@@ -175,6 +174,7 @@ namespace otobüs_rezerve
             {
                 button14.BackColor = Color.Red;
             }
+            label2.Text = "15";
         }
 
         private void button3_Click(object sender, EventArgs e)
@@ -187,6 +187,7 @@ namespace otobüs_rezerve
             {
                 button3.BackColor = Color.Red;
             }
+            label2.Text ="1";
         }
         private void button2_Click(object sender, EventArgs e)
         {
@@ -198,6 +199,7 @@ namespace otobüs_rezerve
             {
                 button2.BackColor = Color.Red;
             }
+            label2.Text = "2";
         }
 
         private void button5_Click(object sender, EventArgs e)
@@ -210,6 +212,7 @@ namespace otobüs_rezerve
             {
                 button5.BackColor = Color.Red;
             }
+            label2.Text = "3";
         }
 
         private void button4_Click(object sender, EventArgs e)
@@ -222,6 +225,7 @@ namespace otobüs_rezerve
             {
                 button4.BackColor = Color.Red;
             }
+            label2.Text = "4";
         }
 
         private void button7_Click(object sender, EventArgs e)
@@ -234,6 +238,7 @@ namespace otobüs_rezerve
             {
                 button7.BackColor = Color.Red;
             }
+            label2.Text = "6";
         }
 
         private void button8_Click(object sender, EventArgs e)
@@ -246,6 +251,7 @@ namespace otobüs_rezerve
             {
                 button8.BackColor = Color.Red;
             }
+            label2.Text = "7";
         }
 
         private void button9_Click(object sender, EventArgs e)
@@ -258,6 +264,7 @@ namespace otobüs_rezerve
             {
                 button9.BackColor = Color.Red;
             }
+            label2.Text = "8";
         }
 
         private void button12_Click(object sender, EventArgs e)
@@ -270,6 +277,7 @@ namespace otobüs_rezerve
             {
                 button12.BackColor = Color.Red;
             }
+            label2.Text = "9";
         }
 
         private void button13_Click(object sender, EventArgs e)
@@ -282,6 +290,7 @@ namespace otobüs_rezerve
             {
                 button13.BackColor = Color.Red;
             }
+            label2.Text = "10";
         }
 
         private void button16_Click(object sender, EventArgs e)
@@ -294,6 +303,7 @@ namespace otobüs_rezerve
             {
                 button16.BackColor = Color.Red;
             }
+            label2.Text = "11";
         }
 
         private void button17_Click(object sender, EventArgs e)
@@ -306,6 +316,7 @@ namespace otobüs_rezerve
             {
                 button17.BackColor = Color.Red;
             }
+            label2.Text = "12";
         }
 
         private void button11_Click(object sender, EventArgs e)
@@ -318,6 +329,7 @@ namespace otobüs_rezerve
             {
                 button11.BackColor = Color.Red;
             }
+            label2.Text = "14";
         }
 
         private void button15_Click(object sender, EventArgs e)
@@ -330,6 +342,7 @@ namespace otobüs_rezerve
             {
                 button15.BackColor = Color.Red;
             }
+            label2.Text = "16";
         }
 
         private void button20_Click(object sender, EventArgs e)
@@ -342,6 +355,7 @@ namespace otobüs_rezerve
             {
                 button20.BackColor = Color.Red;
             }
+            label2.Text = "17";
         }
 
         private void button21_Click(object sender, EventArgs e)
@@ -354,6 +368,7 @@ namespace otobüs_rezerve
             {
                 button21.BackColor = Color.Red;
             }
+            label2.Text = "18";
         }
 
         private void button24_Click(object sender, EventArgs e)
@@ -366,6 +381,7 @@ namespace otobüs_rezerve
             {
                 button24.BackColor = Color.Red;
             }
+            label2.Text = "19";
         }
 
         private void button25_Click(object sender, EventArgs e)
@@ -378,6 +394,7 @@ namespace otobüs_rezerve
             {
                 button25.BackColor = Color.Red;
             }
+            label2.Text = "20";
         }
 
         private void button18_Click(object sender, EventArgs e)
@@ -390,6 +407,7 @@ namespace otobüs_rezerve
             {
                 button18.BackColor = Color.Red;
             }
+            label2.Text = "21";
         }
 
         private void button19_Click(object sender, EventArgs e)
@@ -402,6 +420,7 @@ namespace otobüs_rezerve
             {
                 button19.BackColor = Color.Red;
             }
+            label2.Text = "22";
         }
 
         private void button22_Click(object sender, EventArgs e)
@@ -414,6 +433,7 @@ namespace otobüs_rezerve
             {
                 button22.BackColor = Color.Red;
             }
+            label2.Text = "23";
         }
 
         private void button23_Click(object sender, EventArgs e)
@@ -426,6 +446,7 @@ namespace otobüs_rezerve
             {
                 button23.BackColor = Color.Red;
             }
+            label2.Text = "24";
         }
 
         private void button26_Click(object sender, EventArgs e)
@@ -438,6 +459,7 @@ namespace otobüs_rezerve
             {
                 button26.BackColor = Color.Red;
             }
+            label2.Text = "25";
         }
 
         private void button27_Click(object sender, EventArgs e)
@@ -450,6 +472,7 @@ namespace otobüs_rezerve
             {
                 button27.BackColor = Color.Red;
             }
+            label2.Text = "26";
         }
 
         private void groupBox4_Enter(object sender, EventArgs e)
@@ -485,6 +508,21 @@ namespace otobüs_rezerve
         }
 
         private void textBox4_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dataGridView1_MouseClick(object sender, MouseEventArgs e)
+        {
+            label2.Text = dataGridView1.CurrentRow.Cells[0].Value.ToString();
+            textBox1.Text = dataGridView1.CurrentRow.Cells[1].Value.ToString();
+
+            textBox2.Text = dataGridView1.CurrentRow.Cells[2].Value.ToString();
+            textBox3.Text = dataGridView1.CurrentRow.Cells[3].Value.ToString();
+
+        }
+
+        private void label2_Click_1(object sender, EventArgs e)
         {
 
         }

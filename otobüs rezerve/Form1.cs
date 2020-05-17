@@ -55,7 +55,7 @@ namespace otobüs_rezerve
         }
 
        
-
+        // Aşağıdaki kodlarda kullancı adı ve şifre sorgulaması yapılır.
         private void button1_Click_2(object sender, EventArgs e)
         {
             if (textBox1.Text == "admin" && textBox2.Text == "123456")

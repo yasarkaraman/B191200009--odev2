@@ -44,3 +44,27 @@ C:\Users\HP\Desktop\B191200009-ODEV2\otobüs rezerve\obj\Debug\otobüs rezerve.c
 C:\Users\HP\Desktop\B191200009-ODEV2\otobüs rezerve\obj\Debug\otobüs rezerve.csproj.CoreCompileInputs.cache
 C:\Users\HP\Desktop\B191200009-ODEV2\otobüs rezerve\obj\Debug\otobüs rezerve.exe
 C:\Users\HP\Desktop\B191200009-ODEV2\otobüs rezerve\obj\Debug\otobüs rezerve.pdb
+C:\Users\FATMA\Desktop\B191200009-ODEV2\otobüs rezerve\bin\Debug\otobüs rezerve.exe.config
+C:\Users\FATMA\Desktop\B191200009-ODEV2\otobüs rezerve\bin\Debug\otobüs rezerve.exe
+C:\Users\FATMA\Desktop\B191200009-ODEV2\otobüs rezerve\bin\Debug\otobüs rezerve.pdb
+C:\Users\FATMA\Desktop\B191200009-ODEV2\otobüs rezerve\obj\Debug\otobüs rezerve.csprojAssemblyReference.cache
+C:\Users\FATMA\Desktop\B191200009-ODEV2\otobüs rezerve\obj\Debug\otobüs_rezerve.Form1.resources
+C:\Users\FATMA\Desktop\B191200009-ODEV2\otobüs rezerve\obj\Debug\otobüs_rezerve.Form2.resources
+C:\Users\FATMA\Desktop\B191200009-ODEV2\otobüs rezerve\obj\Debug\otobüs_rezerve.Form3.resources
+C:\Users\FATMA\Desktop\B191200009-ODEV2\otobüs rezerve\obj\Debug\otobüs_rezerve.Properties.Resources.resources
+C:\Users\FATMA\Desktop\B191200009-ODEV2\otobüs rezerve\obj\Debug\otobüs rezerve.csproj.GenerateResource.cache
+C:\Users\FATMA\Desktop\B191200009-ODEV2\otobüs rezerve\obj\Debug\otobüs rezerve.csproj.CoreCompileInputs.cache
+C:\Users\FATMA\Desktop\B191200009-ODEV2\otobüs rezerve\obj\Debug\otobüs rezerve.exe
+C:\Users\FATMA\Desktop\B191200009-ODEV2\otobüs rezerve\obj\Debug\otobüs rezerve.pdb
+C:\Users\HP\Desktop\ODEV2-YASAR OZAN KARAMAN--B191200009\otobüs rezerve\bin\Debug\otobüs rezerve.exe.config
+C:\Users\HP\Desktop\ODEV2-YASAR OZAN KARAMAN--B191200009\otobüs rezerve\bin\Debug\otobüs rezerve.exe
+C:\Users\HP\Desktop\ODEV2-YASAR OZAN KARAMAN--B191200009\otobüs rezerve\bin\Debug\otobüs rezerve.pdb
+C:\Users\HP\Desktop\ODEV2-YASAR OZAN KARAMAN--B191200009\otobüs rezerve\obj\Debug\otobüs rezerve.csprojAssemblyReference.cache
+C:\Users\HP\Desktop\ODEV2-YASAR OZAN KARAMAN--B191200009\otobüs rezerve\obj\Debug\otobüs_rezerve.Form1.resources
+C:\Users\HP\Desktop\ODEV2-YASAR OZAN KARAMAN--B191200009\otobüs rezerve\obj\Debug\otobüs_rezerve.Form2.resources
+C:\Users\HP\Desktop\ODEV2-YASAR OZAN KARAMAN--B191200009\otobüs rezerve\obj\Debug\otobüs_rezerve.Form3.resources
+C:\Users\HP\Desktop\ODEV2-YASAR OZAN KARAMAN--B191200009\otobüs rezerve\obj\Debug\otobüs_rezerve.Properties.Resources.resources
+C:\Users\HP\Desktop\ODEV2-YASAR OZAN KARAMAN--B191200009\otobüs rezerve\obj\Debug\otobüs rezerve.csproj.GenerateResource.cache
+C:\Users\HP\Desktop\ODEV2-YASAR OZAN KARAMAN--B191200009\otobüs rezerve\obj\Debug\otobüs rezerve.csproj.CoreCompileInputs.cache
+C:\Users\HP\Desktop\ODEV2-YASAR OZAN KARAMAN--B191200009\otobüs rezerve\obj\Debug\otobüs rezerve.exe
+C:\Users\HP\Desktop\ODEV2-YASAR OZAN KARAMAN--B191200009\otobüs rezerve\obj\Debug\otobüs rezerve.pdb

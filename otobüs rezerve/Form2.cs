@@ -28,11 +28,12 @@ namespace otobüs_rezerve
         {
             InitializeComponent();
         }
+        // Aşağıdaki kodlar sayesinde sql veritabanı ile c# uygulaması arasında bağlantı kurulur ve veriler koltuknosuna göre sıralanır.
         void kayityap()
         {
             baglanti = new SqlConnection("Data Source=LAPTOP-VMNDQLS3;Initial Catalog=yolcu;Integrated Security=True");
             baglanti.Open();
-            da = new SqlDataAdapter("Select *From kayit", baglanti);
+            da = new SqlDataAdapter("Select *From kayıt Order By koltukno ASC", baglanti);
             DataTable tablo = new DataTable();
             da.Fill(tablo);
             dataGridView1.DataSource = tablo;
@@ -48,45 +49,72 @@ namespace otobüs_rezerve
         }
         //Yolcu eklemek için aşağıdaki kod kullanılır
         private void button1_Click_2(object sender, EventArgs e)
-        {  //Aşağıdaki kodda ad,soyad ve telefon bilgileri tabloda yer alır.
-            string sorgu = "insert into kayit(koltukno,ad,soyad,telefon) values (@koltukno,@ad,@soyad,@telefon)";
-            komut = new SqlCommand(sorgu, baglanti);
-            komut.Parameters.AddWithValue("@koltukno", Convert.ToInt32(label2.Text));
-            komut.Parameters.AddWithValue("@ad", textBox1.Text);
-            komut.Parameters.AddWithValue("@soyad", textBox2.Text);
-            komut.Parameters.AddWithValue("@telefon", Convert.ToInt32(textBox3.Text));
-            baglanti.Open();
-            komut.ExecuteNonQuery();
-            baglanti.Close();
-            kayityap();
-
+        { 
+            if (label2.Text == "00" ||textBox1.Text==""||textBox2.Text==""||maskedTextBox1.Text=="")
+            {
+                MessageBox.Show("Lütfen bilgileri eksiksiz giriniz!");
+            }
+            else
+            {
+                string sorgu = "insert into kayıt(tarih,guzergah,koltukno,ad,soyad,telefon) values (@tarih,@guzergah,@koltukno,@ad,@soyad,@telefon)";
+                komut = new SqlCommand(sorgu, baglanti);
+                komut.Parameters.AddWithValue("@tarih", label6.Text);
+                komut.Parameters.AddWithValue("@guzergah", label10.Text);
+                komut.Parameters.AddWithValue("@koltukno", Convert.ToInt32(label2.Text));
+                komut.Parameters.AddWithValue("@ad", textBox1.Text);
+                komut.Parameters.AddWithValue("@soyad", textBox2.Text);
+                komut.Parameters.AddWithValue("@telefon", maskedTextBox1.Text);
+                baglanti.Open();
+                komut.ExecuteNonQuery();
+                baglanti.Close();
+                kayityap();
+                textBox1.Clear();
+                textBox2.Clear();
+                maskedTextBox1.Clear();
+                label2.Text = "00";
+            }
         }
         //Yolcu silmek için aşağıdaki kod kullanılır
         private void button30_Click(object sender, EventArgs e)
         {
 
-            string sorgu = "Delete From kayit Where ad=@ad";
+            string sorgu = "Delete From kayıt Where koltukno=@koltukno";
             komut = new SqlCommand(sorgu, baglanti);
-            komut.Parameters.AddWithValue("@ad",textBox1.Text);
+            komut.Parameters.AddWithValue("@koltukno",Convert.ToInt32(label2.Text));
             baglanti.Open();
             komut.ExecuteNonQuery();
             baglanti.Close();
             kayityap();
+            textBox1.Clear();
+            textBox2.Clear();
+            maskedTextBox1.Clear();
+            label2.Text = "00";
         }
         //Yolcu güncellemek için aşağıdaki kod kullanılır
 
         private void button29_Click(object sender, EventArgs e)
         {
-            string sorgu = "update kayit set ad=@ad,soyad=@soyad,telefon=@telefon Where koltukno=@koltukno";
-            komut = new SqlCommand(sorgu, baglanti);
-            komut.Parameters.AddWithValue("@koltukno", Convert.ToInt32(label2.Text));
-            komut.Parameters.AddWithValue("@ad", textBox1.Text);
-            komut.Parameters.AddWithValue("@soyad", textBox2.Text);
-            komut.Parameters.AddWithValue("@telefon", Convert.ToInt32(textBox3.Text));
-            baglanti.Open();
-            komut.ExecuteNonQuery();
-            baglanti.Close();
-            kayityap();
+            if (label2.Text == "00" || textBox1.Text == "" || textBox2.Text == "" || maskedTextBox1.Text == "")
+            {
+                MessageBox.Show("Lütfen bilgileri eksiksiz giriniz!");
+            }
+            else
+            {
+                string sorgu = "update kayıt set ad=@ad,soyad=@soyad,telefon=@telefon Where koltukno=@koltukno";
+                komut = new SqlCommand(sorgu, baglanti);
+                komut.Parameters.AddWithValue("@koltukno", Convert.ToInt32(label2.Text));
+                komut.Parameters.AddWithValue("@ad", textBox1.Text);
+                komut.Parameters.AddWithValue("@soyad", textBox2.Text);
+                komut.Parameters.AddWithValue("@telefon", maskedTextBox1.Text);
+                baglanti.Open();
+                komut.ExecuteNonQuery();
+                baglanti.Close();
+                kayityap();
+                textBox1.Clear();
+                textBox2.Clear();
+                maskedTextBox1.Clear();
+                label2.Text = "00";
+            }
         }
        
         private void label2_Click(object sender, EventArgs e)
@@ -105,9 +133,7 @@ namespace otobüs_rezerve
         }
         private void button1_Click_1(object sender, EventArgs e)
         {
-            Form1 satıs = new Form1();
-            satıs.Show();
-            this.Hide();
+            
         }
 
         
@@ -511,18 +537,24 @@ namespace otobüs_rezerve
         {
 
         }
-
+        //Aşağıdaki kodlar sayesinde yolcu bilgileri tabloya yazılmış olur
         private void dataGridView1_MouseClick(object sender, MouseEventArgs e)
         {
-            label2.Text = dataGridView1.CurrentRow.Cells[0].Value.ToString();
-            textBox1.Text = dataGridView1.CurrentRow.Cells[1].Value.ToString();
-
-            textBox2.Text = dataGridView1.CurrentRow.Cells[2].Value.ToString();
-            textBox3.Text = dataGridView1.CurrentRow.Cells[3].Value.ToString();
+            label6.Text = dataGridView1.CurrentRow.Cells[0].Value.ToString();
+            label10.Text = dataGridView1.CurrentRow.Cells[1].Value.ToString();
+            label2.Text = dataGridView1.CurrentRow.Cells[2].Value.ToString();
+            textBox1.Text = dataGridView1.CurrentRow.Cells[3].Value.ToString();
+            textBox2.Text = dataGridView1.CurrentRow.Cells[4].Value.ToString();
+            maskedTextBox1.Text = dataGridView1.CurrentRow.Cells[5].Value.ToString();
 
         }
 
         private void label2_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox3_TextChanged(object sender, EventArgs e)
         {
 
         }

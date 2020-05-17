@@ -5,7 +5,7 @@
 **                             NESNEYE DAYALI PROGRAMLAMA DERSİ
 **                                   2019-2020 BAHAR DÖNEMİ
 **
-**                               ÖDEV NUMARASI..........:2
+**                               PROJE NUMARASI.........:01
 **                               ÖĞRENCİ ADI............:Yaşar ozan KARAMAN
 **                               ÖĞRENCİ NUMARASI.......:B191200009   
 **                               DERSİN ALINDIĞI GRUP...:A
@@ -421,6 +421,11 @@ namespace otobüs_rezerve
             Form1 giris = new Form1();
             giris.Show();
             this.Hide();
+        }
+
+        private void comboBox1_SelectedIndexChanged_1(object sender, EventArgs e)
+        {
+
         }
     }
 }
